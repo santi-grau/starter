@@ -10,6 +10,7 @@ var stylus = require('stylus');
 var nib = require('nib');
 var fs = require('fs');
 var figlet = require('figlet');
+var title = require('./package.json').name;
 
 // ┌────────────────────────────────────────────────────────────────────┐
 // | Initialize vars + constants
@@ -34,7 +35,7 @@ app.use(express.static(__dirname + '/public'));
 // | Routes
 // └────────────────────────────────────────────────────────────────────┘
 app.get('/', function(req, res){
-	res.render('index');
+	res.render('index', {title: title});
 });
 
 // ┌────────────────────────────────────────────────────────────────────┐
@@ -45,6 +46,6 @@ app.listen(port, function() {
 });
 
 
-figlet('Hello World!!', function(err, data) {
+figlet(title, function(err, data) {
 	console.log(data)
 });

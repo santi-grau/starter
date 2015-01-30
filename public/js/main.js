@@ -14,7 +14,7 @@ require(['backbone'],
 		var App = Backbone.View.extend({
 			el: 'window',
 			initialize: function(){
-				$('body').css('background', '#F00')
+				
 			}
 		});
 		window.App = new App();
