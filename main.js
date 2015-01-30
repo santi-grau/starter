@@ -10,7 +10,7 @@ var stylus = require('stylus');
 var nib = require('nib');
 var fs = require('fs');
 var figlet = require('figlet');
-var title = require('./package.json').name;
+var title = require('./package.json').name.toUpperCase();
 
 // ┌────────────────────────────────────────────────────────────────────┐
 // | Initialize vars + constants
