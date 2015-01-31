@@ -10,7 +10,7 @@ var stylus = require('stylus');
 var nib = require('nib');
 var fs = require('fs');
 var figlet = require('figlet');
-var title = require('./package.json').name.toUpperCase();
+var title = require('./package.json').name;
 
 // ┌────────────────────────────────────────────────────────────────────┐
 // | Initialize vars + constants
@@ -45,7 +45,10 @@ app.listen(port, function() {
 	console.log('\n↳ Listening on port: ' + port);
 });
 
-
-figlet(title, function(err, data) {
-	console.log(data)
+var font;
+figlet.fonts(function(err, fonts) {
+	font = fonts[Math.floor(Math.random() * fonts.length)];
+	figlet(title, { font : font},function(err, data) {
+		console.log(data)
+	});
 });
