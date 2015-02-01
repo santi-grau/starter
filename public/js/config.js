@@ -4,19 +4,10 @@
 'use strict';
 require.config({
 	paths: {
-		jquery: 'libs/jquery/dist/jquery',
-		underscore: 'libs/underscore/underscore',
+		text: 'libs/text/text',
+		jquery: 'libs/jquery/dist/jquery.min',
+		underscore: 'libs/underscore/underscore-min',
 		backbone: 'libs/backbone/backbone'
-	}
+	},
+	deps: ['views/main']
 });
-require(['backbone'],
-	function(Backbone){
-		var App = Backbone.View.extend({
-			el: 'window',
-			initialize: function(){
-				
-			}
-		});
-		window.App = new App();
-	}
-);
