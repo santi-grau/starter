@@ -47,8 +47,8 @@ figlet.fonts(function(err, fonts) {
 	var font = fonts[Math.floor(Math.random() * fonts.length)];
 	figlet(pckg.name, { font : font},function(err, data) {
 		console.log(data);
-		console.log('V ' + pckg.decription);
-		console.log('V ' + pckg.version);
-		console.log('\n↳ Listening on port: ' + port);
+		console.log('└─────> ' + pckg.description);
+		console.log('└─────> v ' + pckg.version);
+		console.log('└─────> Listening on port: ' + port);
 	});
 });
