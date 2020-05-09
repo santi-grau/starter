@@ -1,3 +1,4 @@
-console.log('Welcome')
-document.body.style.background = '#'+((1<<24)*Math.random()|0).toString(16)
-document.getElementById('main').style.color = '#'+((1<<24)*Math.random()|0).toString(16)
+import figlet from 'figlet';
+import standard from 'figlet/importable-fonts/Standard.js'
+figlet.parseFont( 'Standard', standard )
+figlet.text( 'hey!', { font: 'Standard', }, ( err, data ) => { document.getElementById( 'main' ).innerHTML = data } )

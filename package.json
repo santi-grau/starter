@@ -1,11 +1,10 @@
 {
-  "name": "simulator",
+  "name": "Starter with parcel",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel app/views/index.pug --no-hmr --open",
-    "build": "rm -rf docs && parcel build app/views/index.pug --no-source-maps --out-dir docs --public-url `.`"
+    "start": "parcel app/views/index.pug --no-hmr --open"
   },
   "keywords": [],
   "author": "proper-code",
@@ -13,10 +12,8 @@
   "devDependencies": {
     "figlet": "*",
     "parcel-bundler": "*",
-    "pug": "^2.0.4",
-    "stylus": "^0.54.7"
+    "pug": "*",
+    "stylus": "*"
   },
-  "dependencies": {
-    "three": "*"
-  }
+  "dependencies": {}
 }
